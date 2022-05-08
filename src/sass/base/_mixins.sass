@@ -9,4 +9,29 @@
         z-index: -1
         top:-28%
         left: 0
-    
+
+@mixin before_circle_center
+    &::before
+        content: ''
+        position: absolute
+        width: 36px
+        height: 36px
+        background: $main_color
+        border-radius: 100%
+        z-index: -1
+        top:-28%
+        left: 50%
+        transform: translateX(-50%)
+
+@mixin before_circle_about
+    &::before
+        content: ''
+        position: absolute
+        width: 36px
+        height: 36px
+        background: $main_color
+        border-radius: 100%
+        z-index: -1
+        top: 0
+        left: 0
+        
