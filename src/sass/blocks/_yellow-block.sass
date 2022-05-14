@@ -6,10 +6,20 @@
         @include before_circle
         position: relative
         z-index: 2
+        &_center
+            @include before_circle_center
+            padding-left: 0
+            display: block
+            text-align: center
     &__subtitle
         margin-bottom: 5px
+        &_center
+            text-align: center
+            margin-bottom: 0
     &__divider
         background-color: $main_color
         width: 60px
         height: 3px
+        &_center
+            margin: 25px auto 0 auto
        

@@ -1,0 +1,87 @@
+.experience
+    padding-top: 120px
+    &__head_block
+        padding-top: 6px
+    &__wrapper
+        padding: 60px 65px 0 65px
+        display: grid
+        grid-template-columns: repeat(2, 425px)
+        grid-template-rows: 1fr
+        column-gap: 160px
+    &__title
+        position: relative
+        &::before
+            content: ''
+            position: absolute
+            width: 15px
+            height: 15px
+            background: $main_color
+            border-radius: 100%
+            top: 50%
+            transform: translateY(-50%)
+            left: -45px
+            z-index: 10
+    &__list
+        
+        list-style-type: none
+        li
+            margin-top: 45px
+            position: relative
+            &::after
+                content: ''
+                position: absolute
+                height: calc( 100% + 54px ) 
+                width: 1px
+                top: -54px
+                left: -38px
+                background-color: #000
+                z-index: 2
+            // &::before
+            //     content: ''
+            //     position: absolute
+            //     height: 1px
+            //     width: 38px
+            //     top: 18px
+            //     left: -38px
+            //     background-color: #000
+            //     z-index: 2
+    &__column
+        padding-left: 45px
+        padding-right: 15px
+        // overflow: hidden
+    &__head
+        display: flex
+        gap: 19px
+        align-items: center
+    &__header
+        font-weight: 700
+        font-size: 14px
+        line-height: 21px
+        margin-bottom: 0
+    &__subheader
+        font-weight: 500
+        font-size: 12px
+        line-height: 18px
+        color: #000000
+    &__text
+        margin-top: 12px
+        font-weight: 500
+        font-size: 12px
+        line-height: 18px
+    &__image
+        padding-left: 18px
+        padding-top: 14px
+        position: relative
+        @include before_circle_about
+        &::after
+            content: ''
+            position: absolute
+            height: 1px
+            width: 38px
+            top: 18px
+            left: -38px
+            background-color: #000
+            z-index: 2
+        &_left
+            padding-left: 13px
+        

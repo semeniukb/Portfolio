@@ -16,3 +16,10 @@ overlay.addEventListener('click', () => {
 list.addEventListener('click', () => {
     menu.classList.remove('active');
 });
+
+const percent = document.querySelectorAll('.scales__percent'),
+      lines = document.querySelectorAll('.scales__line-yellow')
+
+percent.forEach( (item, i) =>{
+    lines[i].style.width = item.innerHTML;
+});
