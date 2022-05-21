@@ -1,0 +1,178 @@
+@media (max-width: 1199.998px)
+    .container
+        max-width: 960px
+    .sidepanel
+        display: none
+    .about
+        padding: 80px 0 0 0
+    .experience
+        padding-top: 80px
+        &__wrapper
+            padding: 20px 10px 0 10px
+            column-gap: 0
+            justify-content: space-between
+    .skills
+        padding-top: 80px
+        &__wrapper
+            justify-content: center
+    .scales
+        padding-top: 80px
+        &__wrapper
+            justify-content: center
+    .portfolio
+        padding-top: 80px
+        &__wrapper
+            justify-content: center
+        .vertical
+            grid-column: auto
+            grid-row: auto
+        .horizontal
+            grid-column: auto
+            grid-row: auto
+    .contacts
+        padding: 80px 0 80px 0
+        &__wrapper
+            padding: 0 35px 0 35px
+            display: grid
+            grid-template-columns: 585px
+            justify-content: center
+        &__image
+            display: none
+    
+        
+    
+@media (max-width: 991.998px)
+    .container
+        max-width: 720px
+    .about
+        &__wrapper
+            grid-template-columns: 1fr
+            grid-template-rows: 500px 1fr
+        &__descr
+            padding-right: 0
+        &__blocks
+            padding-right: 0
+        &__image
+            grid-column: unset
+            grid-row: unset
+            width: 100%
+            height: 100%
+            object-fit: cover
+            justify-self: center
+    .experience
+            &__wrapper
+                grid-template-columns: repeat(auto-fit, 425px)
+                justify-content: center
+                row-gap: 40px
+    .scales
+        padding-top: 80px
+        &__wrapper
+            column-gap: 20px
+    .price
+        &__wrapper
+            padding: 60px 0px 0 0px
+            justify-content: space-between
+            row-gap: 20px
+            grid-template-columns: repeat(auto-fit, 340px)
+        &__column
+            row-gap: 20px
+
+
+@media (max-width: 767.998px)
+    .container
+        max-width: 540px
+    .promo
+        padding: 150px 0 0 0
+        &__title
+            width: 360px
+            font-size: 36px
+            line-height: 39px
+    
+    .portfolio
+        &__wrapper
+            gap: 15px
+    .price
+        &__wrapper
+            justify-content: center
+    .contacts
+        &__wrapper
+            grid-template-columns: 500px
+        &__form
+            grid-template: 45px 45px 145px 45px / 1fr
+        &__textarea
+            grid-column: auto
+        &__trigger
+            grid-column: auto 
+            // column-gap: 35px
+        &__policy
+            display: flex
+            align-items: center  
+    
+
+
+@media (max-width: 574.998px)
+    .container
+        width: 100%
+        padding: 0 10px
+    .promo
+        padding: 205px 0 0 0
+        &__title
+            font-size: 26px
+            line-height: 39px
+            width: 300px
+    .hamburger
+        right: 20px
+    .menu
+        &__block
+            width: 280px
+            padding-left: 20px
+    .about
+        &__wrapper
+            grid-template-rows: 0fr 1fr
+        &__image
+            width: 300px
+            height: 340px
+    .title_fz36
+        margin-top: 20px
+        font-size: 24px
+        line-height: 36px
+    .experience 
+        padding-top: 40px
+        &__wrapper
+            padding: 20px 0 0 0
+            grid-template-columns: 1fr
+        &__column
+            padding-right: 0px
+    .skills
+        padding-top: 40px
+        &__wrapper
+            margin-top: 20px
+    .scales
+        &__wrapper
+            grid-template-columns: repeat(auto-fit,300px)
+            row-gap: 40px
+    .portfolio
+        padding-top: 40px
+        &__wrapper
+            padding-top: 40px
+    .price
+        padding-top: 40px
+        &__wrapper
+            grid-template-columns: repeat(auto-fit,300px)
+            padding-top: 20px
+        &__item
+            grid-template-columns: 157px auto
+    .contacts
+        &__wrapper
+            grid-template-columns: 1fr
+            padding: 0
+        &__trigger
+            grid-column: auto
+            grid-template: 36px 45px / 220px
+            row-gap: 20px
+            justify-content: center
+        &__policy
+            display: flex
+            align-items: center  
+        .top
+            grid-row: 1 / 2
