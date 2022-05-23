@@ -23,3 +23,24 @@ const percent = document.querySelectorAll('.scales__percent'),
 percent.forEach( (item, i) =>{
     lines[i].style.width = item.innerHTML;
 });
+
+
+
+$('#form').validate({
+    rules: {
+        name: "required",
+        email: {
+            required: true,
+            email: true
+        },
+        agree: {
+            required: true
+        }
+    },
+    messages: {
+        agree: {
+            required: "Please use checkbox!"
+        }
+    }
+});
+
