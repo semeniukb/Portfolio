@@ -28,7 +28,10 @@ percent.forEach( (item, i) =>{
 
 $('#form').validate({
     rules: {
-        name: "required",
+        name: {
+            required: true,
+            minlength: 2
+        },
         email: {
             required: true,
             email: true
@@ -38,9 +41,33 @@ $('#form').validate({
         }
     },
     messages: {
+        name: {
+            required:"Введіть будь ласка ваше ім'я",
+            minlength: jQuery.validator.format("Введіть більше {0} символів")
+          },
+        email:{
+            required:"Введіть будь ласка ваш емейл",
+        },
         agree: {
-            required: "Please use checkbox!"
+            required: "Політика конфеденціальності!"
         }
     }
 });
 
+$('#form').submit(function(e){
+    e.preventDefault();
+
+    if(!$(this).valid()) {
+        return;
+    }
+
+    $.ajax({
+        type:"POST",
+        url: "mailer/smart.php",
+        data: $(this).serialize()
+    }).done(function(){
+        $(this).find('input').val('')
+        $('#form').trigger('reset');
+      });
+    return false;
+});
