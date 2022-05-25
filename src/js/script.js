@@ -54,7 +54,7 @@ $('#form').validate({
     }
 });
 
-$('#form').submit(function(e){
+$('form').submit(function(e){
     e.preventDefault();
 
     if(!$(this).valid()) {
@@ -67,7 +67,7 @@ $('#form').submit(function(e){
         data: $(this).serialize()
     }).done(function(){
         $(this).find('input').val('')
-        $('#form').trigger('reset');
+        $('form').trigger('reset');
       });
     return false;
 });

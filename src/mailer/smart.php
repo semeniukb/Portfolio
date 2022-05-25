@@ -14,7 +14,7 @@ $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
 $mail->Username = 'crimsssz@gmail.com';                 // Наш логин
-$mail->Password = 'Sammy14rbk';                           // Наш пароль от ящика
+$mail->Password = 'Crimson14rbk';                           // Наш пароль от ящика
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
  
@@ -32,8 +32,8 @@ $mail->Subject = 'Данные';
 $mail->Body    = '
 		Пользователь оставил данные <br> 
 	Имя: ' . $name . ' <br>
-	E-mail: ' . $email . '' '<br>
-	Повідомлення: ' . $text . ;
+	E-mail: ' . $email . '<br>
+	Повідомлення: ' . $text .  '';
 
 if(!$mail->send()) {
     return false;
